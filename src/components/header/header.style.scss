@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    right: 0;
+    height: 70px;
+    margin-bottom: 25px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    padding: 0 60px;
+    opacity: .98;
+    border-bottom: 1px solid rgba($color: grey, $alpha: .2);
+
+    &__logo-container {
+        display: flex;
+        align-items: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: grey;
+    }
+
+    &__logo {
+        height: 65px;
+        width: 65px;
+    }
+
+    &__options {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+
+        &--option {
+            margin-left: 20px;
+            text-transform: uppercase;
+        }
+    }
+}
