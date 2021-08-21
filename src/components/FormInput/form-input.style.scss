@@ -1,0 +1,36 @@
+.form-input{
+    &__group {
+       display: flex;
+       flex-direction: column;
+       position: relative;
+
+       & input {
+           padding: 12px 5px;
+           outline: none;
+           border: none;
+           border-bottom: 2px solid rgb(190, 190, 190);
+           margin: 20px 0;
+           font-size: 15px;
+           color: gray;
+       }
+
+       & input[type=password] {
+           letter-spacing: 3.5px;
+           font-size: 20px;
+       }
+
+    }
+    &__group input:focus ~ &__label {
+        top: 5px;
+    }
+
+    &__label {
+        position: absolute;
+        top: 35px;
+        transition: all .5s;
+
+        &--shrink {
+            top: 5px;
+        }
+    }
+}

@@ -11,8 +11,8 @@
     z-index: 1000;
     background: white;
     padding: 0 60px;
-    opacity: .98;
-    border-bottom: 1px solid rgba($color: grey, $alpha: .2);
+    opacity: 0.98;
+    border-bottom: 1px solid rgba($color: grey, $alpha: 0.2);
 
     &__logo-container {
         display: flex;
@@ -31,10 +31,21 @@
         width: 50%;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
 
         &--option {
             margin-left: 20px;
             text-transform: uppercase;
+            cursor: pointer;
         }
+
+        &--login {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .mr-2 {
+        margin-right: 20px;
     }
 }
