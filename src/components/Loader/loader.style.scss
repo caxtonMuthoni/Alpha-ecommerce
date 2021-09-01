@@ -1,0 +1,12 @@
+.loader {
+    border: 3px solid rgba(0, 0, 0, 0.171);
+    border-top-color: #000000;
+    border-radius: 50%;
+    animation: 1s spin infinite ease-out;
+}
+
+@keyframes spin {
+   to {
+       transform: rotate(360deg);
+   }
+}

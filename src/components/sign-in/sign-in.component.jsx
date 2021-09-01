@@ -1,9 +1,10 @@
 import React from 'react'
 import FormInput from '../FormInput/form-input.component'
 import CustomButton from '../custom-button/custom-button.component'
+import Loader from "../Loader/loader.component";
 import './sign-in.style.scss'
 
-import {signInWithGoogle} from '../../firebase/firebase.utils'
+import {auth, signInWithGoogle} from '../../firebase/firebase.utils'
 
 class SignIn extends React.Component {
     constructor(props) {
@@ -19,8 +20,12 @@ class SignIn extends React.Component {
         this.setState({[name]: value})
     }
 
-    onFormSubmit = event => {
+    onFormSubmit = async event => {
         event.preventDefault()
+
+        const {email , password} = this.state
+
+        await auth.signInWithEmailAndPassword(email, password)
 
         this.setState({email: '', password: ''})
     }
@@ -48,6 +53,7 @@ class SignIn extends React.Component {
                         required
                     />
 
+                   {/* <Loader radius={20}/> */}
                    <div className="sign-in__btns">
                    <CustomButton type='submit' color="black">Sign In</CustomButton>
                    <CustomButton color="blue" onClick={signInWithGoogle}>Sign In With Google</CustomButton>
